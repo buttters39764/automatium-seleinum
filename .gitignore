@@ -4,7 +4,10 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
+<<<<<<< HEAD
 # Obsidian local state (do not version)
 documentation/.obsidian/workspace.json
 documentation/.obsidian/workspaces.json
 documentation/.obsidian/cache/
+=======
+>>>>>>> d38bc09b4961696f661fe839931418a35b555399
