@@ -4,13 +4,22 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
+<<<<<<< HEAD
 .venv/
 .idea/
 __pycache__/
 *.pyc
 .pytest_cache/
 
+=======
+<<<<<<< HEAD
+>>>>>>> dev
 # Obsidian local state (do not version)
 documentation/.obsidian/workspace.json
 documentation/.obsidian/workspaces.json
 documentation/.obsidian/cache/
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d38bc09b4961696f661fe839931418a35b555399
+>>>>>>> dev
