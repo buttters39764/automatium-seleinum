@@ -1,13 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+from driver_factory import create_driver
 from login import login_interactive
 
 
 def main():
-    options = Options()
-    driver = webdriver.Firefox(options=options)
-    driver.maximize_window()
-
+    driver = create_driver()
     try:
         login_interactive(driver)
         input("Nyomj Entert a bezáráshoz... ")
