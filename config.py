@@ -1,0 +1,3 @@
+LOGIN_URL = "http://d01.np:9004/login"
+TIMEOUT = 30
+VISUAL_DELAY = 2
