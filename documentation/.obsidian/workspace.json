@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d9d549810a02583c",
+            "id": "e2b90584f7c9caa1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "próbamd.md",
+                "file": "Telepítés és indítás (Windows).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "próbamd"
+              "title": "Telepítés és indítás (Windows)"
             }
           }
         ]
@@ -183,9 +183,10 @@
       "bases:Új bázis létrehozása": false
     }
   },
-  "active": "d9d549810a02583c",
+  "active": "e2b90584f7c9caa1",
   "lastOpenFiles": [
     "próbamd.md",
+    "Telepítés és indítás (Windows).md",
     "Üdvözöljük.md"
   ]
 }
