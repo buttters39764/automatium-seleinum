@@ -39,5 +39,14 @@ Ebben benne van:
 
 ## 3) Fontos
 
-A repository lehúzása **nem elég** a futtatáshoz.  
+A repository lehúzása nem elég a futtatáshoz.  
 A `documentation` mappa lépéseit végig kell csinálni.
+
+## 4) Futtatási környezet (fontos)
+
+A projekt **Windows CMD / PowerShell** környezetben támogatott és tesztelt.
+
+- ✅ Támogatott: **Command Prompt (CMD)**, **PowerShell**
+- ⚠️ WSL nem támogatott futtatási környezet ehhez a projekthez
+
+Javaslat: a `main.py` futtatását mindig CMD-ből vagy PowerShellből végezd.
