@@ -2,8 +2,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from config import EXIT_DOT_DELAY_SECONDS, EXIT_DOT_COUNT
-from ui import animated_exit
+from config import (
+    EXIT_DOT_DELAY_SECONDS,
+    EXIT_DOT_COUNT,
+    CLEAR_CONSOLE_ON_SUBMENU_ENTER,
+    CLEAR_CONSOLE_ON_SUBMENU_EXIT,
+)
+from ui import animated_exit, clear_console
 from menu_actions.base import MenuAction, ActionResult
 
 
@@ -12,6 +17,9 @@ class IVITaroloAction(MenuAction):
     label = "IVI tároló"
 
     def run(self, driver):
+        if CLEAR_CONSOLE_ON_SUBMENU_ENTER:
+            clear_console()
+
         while True:
             print("\nIVI tároló menü")
             print("1) új IVI")
@@ -31,6 +39,8 @@ class IVITaroloAction(MenuAction):
 
             if sub == "q":
                 animated_exit(EXIT_DOT_DELAY_SECONDS, EXIT_DOT_COUNT)
+                if CLEAR_CONSOLE_ON_SUBMENU_EXIT:
+                    clear_console()
                 return ActionResult(True, "Visszalépés a főmenübe.")
 
             print("Érvénytelen választás, próbáld újra.")

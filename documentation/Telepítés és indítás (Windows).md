@@ -16,9 +16,10 @@ CMD-ben futtasd:
 ```
 python --version
 ```
----
+
 Nekem jelenleg ez van telepítve: Python 3.12.3
 
+---
 ### b) Ha nincs
 https://www.python.org/downloads/windows/
 
