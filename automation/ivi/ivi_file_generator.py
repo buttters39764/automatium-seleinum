@@ -1,41 +1,49 @@
-import json
+import re
 import uuid
 from datetime import datetime
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
+from automation.config.config import IVI_MAX_FILES_PER_USER
 
-VIN_PREFIX = "WF0EXXSK1AU"
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 TEMPLATE_PATH = BASE_DIR / "input_file" / "ivi" / "template" / "ivi_temp.xml"
 GENERATED_DIR = BASE_DIR / "input_file" / "ivi" / "generated"
-STATE_PATH = BASE_DIR / "input_file" / "ivi" / "ivi_state.json"
-
-def get_next_counter() -> int:
-    if not STATE_PATH.exists():
-        STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-        STATE_PATH.write_text('{"last_counter": 0}', encoding="utf-8")
-
-    with open(STATE_PATH, "r", encoding="utf-8") as f:
-        state = json.load(f)
-
-    last_counter = state.get("last_counter", 0)
-    next_counter = last_counter + 1
-
-    with open(STATE_PATH, "w", encoding="utf-8") as f:
-        json.dump({"last_counter": next_counter}, f, indent=2)
-
-    return next_counter
-
-def generate_next_vin(counter: int) -> str:
-    serial = str(counter).zfill(6)
-    return f"{VIN_PREFIX}{serial}"
 
 
-def create_ivi_file() -> Path:
-    counter = get_next_counter()
-    vin = generate_next_vin(counter)
+def build_user_prefix(username: str) -> str:
+    local_part = username.split("@")[0].lower()
+    cleaned = re.sub(r"[^a-z0-9]", "", local_part)
+
+    if len(cleaned) >= 3:
+        return cleaned[:3]
+
+    return cleaned.ljust(3, "x") if cleaned else "usr"
+
+
+def generate_vin(username: str) -> str:
+    user_prefix = build_user_prefix(username)
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S%f")[:-3]
+    return f"{user_prefix}{timestamp}"
+
+
+def cleanup_user_files(user_prefix: str) -> None:
+    GENERATED_DIR.mkdir(parents=True, exist_ok=True)
+
+    user_files = sorted(
+        GENERATED_DIR.glob(f"ivi_{user_prefix}*.xml"),
+        key=lambda path: path.stat().st_mtime
+    )
+
+    while len(user_files) > IVI_MAX_FILES_PER_USER:
+        oldest_file = user_files.pop(0)
+        oldest_file.unlink(missing_ok=True)
+
+
+def create_ivi_file(username: str) -> Path:
+    vin = generate_vin(username)
+    user_prefix = build_user_prefix(username)
 
     tree = ET.parse(TEMPLATE_PATH)
     root = tree.getroot()
@@ -48,17 +56,18 @@ def create_ivi_file() -> Path:
     if ref_element is not None:
         ref_element.text = str(uuid.uuid4())
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-    filename = f"ivi_{timestamp}_{vin}.xml"
+    filename = f"ivi_{vin}.xml"
     output_path = GENERATED_DIR / filename
 
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
-
     tree.write(output_path, encoding="utf-8", xml_declaration=True)
+
+    cleanup_user_files(user_prefix)
 
     return output_path
 
+
 if __name__ == "__main__":
-    output = create_ivi_file()
+    test_username = "buttters@ext.dmz"
+    output = create_ivi_file(test_username)
     print("Generált fájl:", output)
