@@ -13,3 +13,6 @@ CLEAR_CONSOLE_ON_SUBMENU_EXIT = True # True | False
 
 # Elsődleges preferencia
 DEFAULT_BROWSER = "firefox"  # firefox | chrome | edge
+
+# IVI fájl generátor
+IVI_MAX_FILES_PER_USER = 3 # hány darab IVI fájlt tartunk meg

@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='utf-8'?>
+<InitialVehicleInformation>
+	<Header>
+		<IVIReferenceId>659d0d62-a3d0-4540-9aa5-f631107b9ea2</IVIReferenceId>
+		<VersionNumberXsd>1.9</VersionNumberXsd>
+	</Header>
+	<Body>
+		<CocDataGroup>
+			<VehicleIdentificationNumber>but20260312132437874</VehicleIdentificationNumber>
+			<StageOfCompletionCode>C</StageOfCompletionCode>
+			<TypeApprovalTypeCode>EC</TypeApprovalTypeCode>
+			<Type>SK</Type>
+			<Variant>ALBPA</Variant>
+			<Version>GE8</Version>
+			<RevisionDate>2023-05-02</RevisionDate>
+			<VehicleCategoryCode>M1</VehicleCategoryCode>
+			<LocOfTheStatutoryPlatesCode>B1</LocOfTheStatutoryPlatesCode>
+			<MethodOfAttachmStatPlatesCode>A1</MethodOfAttachmStatPlatesCode>
+			<LocationOfTheVinCode>A0</LocationOfTheVinCode>
+			<TypeApprovalNumber>e3*200111/16*0232*31</TypeApprovalNumber>
+			<TypeApprovalDateOfIssue>2023-05-02</TypeApprovalDateOfIssue>
+			<RightLeftHandTrafficCode>R</RightLeftHandTrafficCode>
+			<MetricImperialSpeedometerCode>M</MetricImperialSpeedometerCode>
+			<NumberOfAxles>5</NumberOfAxles>
+			<NumberOfWheels>10</NumberOfWheels>
+			<NumberOfPoweredAxles>1</NumberOfPoweredAxles>
+			<Wheelbase>2970</Wheelbase>
+			<Length>4853</Length>
+			<Width>1855</Width>
+			<Height>1818</Height>
+			<MassOfTheVehicleInRunningOrder>1695</MassOfTheVehicleInRunningOrder>
+			<ActualMassOfTheVehicle>1797</ActualMassOfTheVehicle>
+			<TechnPermMaxLadenMass>2450</TechnPermMaxLadenMass>
+			<TechnPermMaxMassCombination>3950</TechnPermMaxMassCombination>
+			<PrimaryColourCode>1</PrimaryColourCode>
+			<NumberOfDoors>4</NumberOfDoors>
+			<ConfigurationOfDoors>2R,2L</ConfigurationOfDoors>
+			<NrOfSeatingPositions>5</NrOfSeatingPositions>
+			<Remarks>NO.30 (AxleTrack) A1 max 1572##NO.30 (AxleTrack) A2 max 1606##NO 16.2. (TechnicallyPermMassAxle): with trailer axle 2:+100 kg##NO 35.: only with wheelhouse flaring:  215/55 R17, 225/45 R18</Remarks>
+			<OdometerUnitCode>K</OdometerUnitCode>
+			<IntendedCountryOfRegistrCode>H</IntendedCountryOfRegistrCode>
+			<VersionCoc>2</VersionCoc>
+			<VersionDateIVI>2024-03-07T01:26:24</VersionDateIVI>
+			<VehicleFittedWithEcoInnovInd>Y</VehicleFittedWithEcoInnovInd>
+			<FuelTypeCode>M</FuelTypeCode>
+			<PureElectricVehIndicator>N</PureElectricVehIndicator>
+			<HybridVehIndicator>N</HybridVehIndicator>
+			<AutomatedVehCode>NON</AutomatedVehCode>
+			<DateOfManufactureVeh>2024-02-20</DateOfManufactureVeh>
+			<VehicleCertified155Indicator>N</VehicleCertified155Indicator>
+			<VehicleCertified156Indicator>N</VehicleCertified156Indicator>
+			<SigningAuthorityTable>
+				<SigningAuthorityGroup>
+					<NameOfSigner>Joerg Beyer</NameOfSigner>
+					<PositionOfSigner>Product Development Executive Director Ford of Europe</PositionOfSigner>
+					<PlaceOfSignature>KOELN</PlaceOfSignature>
+					<DateOfSignature>2024-02-20</DateOfSignature>
+				</SigningAuthorityGroup>
+			</SigningAuthorityTable>
+			<GearGroup>
+				<GearboxTypeCode>H</GearboxTypeCode>
+				<GearRatioTable>
+					<GearRatioGroup>
+						<GearNumber>1</GearNumber>
+						<GearRatio>3.750</GearRatio>
+						<FinalDriveTable>
+							<FinalDriveGroup>
+								<FinalDriveNumber>1</FinalDriveNumber>
+								<FinalDriveRatio>3.944</FinalDriveRatio>
+							</FinalDriveGroup>
+						</FinalDriveTable>
+					</GearRatioGroup>
+					<GearRatioGroup>
+						<GearNumber>2</GearNumber>
+						<GearRatio>2.100</GearRatio>
+						<FinalDriveTable>
+							<FinalDriveGroup>
+								<FinalDriveNumber>1</FinalDriveNumber>
+								<FinalDriveRatio>3.944</FinalDriveRatio>
+							</FinalDriveGroup>
+						</FinalDriveTable>
+					</GearRatioGroup>
+					<GearRatioGroup>
+						<GearNumber>3</GearNumber>
+						<GearRatio>1.276</GearRatio>
+						<FinalDriveTable>
+							<FinalDriveGroup>
+								<FinalDriveNumber>1</FinalDriveNumber>
+								<FinalDriveRatio>3.944</FinalDriveRatio>
+							</FinalDriveGroup>
+						</FinalDriveTable>
+					</GearRatioGroup>
+					<GearRatioGroup>
+						<GearNumber>4</GearNumber>
+						<GearRatio>0.878</GearRatio>
+						<FinalDriveTable>
+							<FinalDriveGroup>
+								<FinalDriveNumber>1</FinalDriveNumber>
+								<FinalDriveRatio>3.944</FinalDriveRatio>
+							</FinalDriveGroup>
+						</FinalDriveTable>
+					</GearRatioGroup>
+					<GearRatioGroup>
+						<GearNumber>5</GearNumber>
+						<GearRatio>0.674</GearRatio>
+						<FinalDriveTable>
+							<FinalDriveGroup>
+								<FinalDriveNumber>1</FinalDriveNumber>
+								<FinalDriveRatio>3.944</FinalDriveRatio>
+							</FinalDriveGroup>
+						</FinalDriveTable>
+					</GearRatioGroup>
+					<GearRatioGroup>
+						<GearNumber>6</GearNumber>
+						<GearRatio>0.510</GearRatio>
+						<FinalDriveTable>
+							<FinalDriveGroup>
+								<FinalDriveNumber>1</FinalDriveNumber>
+								<FinalDriveRatio>3.944</FinalDriveRatio>
+							</FinalDriveGroup>
+						</FinalDriveTable>
+					</GearRatioGroup>
+				</GearRatioTable>
+			</GearGroup>
+			<MakeTable>
+				<MakeGroup>
+					<Make>FORD</Make>
+				</MakeGroup>
+			</MakeTable>
+			<CommercialNameTable>
+				<CommercialNameGroup>
+					<CommercialName>TOURNEO CONNECT</CommercialName>
+				</CommercialNameGroup>
+			</CommercialNameTable>
+			<StageNrOfManufacturingTable>
+				<StageNrOfManufacturingGroup>
+					<AddressTable>
+						<AddressGroup>
+							<AddressTypeCode>PSM</AddressTypeCode>
+							<Name>Ford-Werke GmbH</Name>
+							<AddressLine1>Henry-Ford-Strasse 1</AddressLine1>
+							<AddressLine2>50735</AddressLine2>
+							<PlaceOfResidence>koeln</PlaceOfResidence>
+							<CountryOfResidence>Deutschland</CountryOfResidence>
+						</AddressGroup>
+					</AddressTable>
+				</StageNrOfManufacturingGroup>
+			</StageNrOfManufacturingTable>
+			<BodyworkTable>
+				<BodyworkGroup>
+					<CodeForBodywork>AF</CodeForBodywork>
+				</BodyworkGroup>
+			</BodyworkTable>
+			<AxleTable>
+			
+			
+			
+			
+				<AxleGroup>
+					<AxleNumber>1</AxleNumber>
+					<TwinWheelsAxleInd>N</TwinWheelsAxleInd>
+					<PoweredAxleInd>Y</PoweredAxleInd>
+					<AxleTrack>1751</AxleTrack>
+					<AxleSpacing>2970</AxleSpacing>
+					<TechnicallyPermMassAxle>1180</TechnicallyPermMassAxle>
+					<TyreAxleTable>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>1</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+							<RollingResistanceClassCode>A</RollingResistanceClassCode>
+							<CO2DeterminationTyreInd>Y</CO2DeterminationTyreInd>
+							<TyreCategoryCode>C1</TyreCategoryCode>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>2</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>225/45 R18</TyreSize>
+							<TyreNumber>3</TyreNumber>
+							<LoadCapacityIndexSingleWheel>95</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>7,0JX18 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>4</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>5</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+					</TyreAxleTable>
+				</AxleGroup>
+				
+				
+				
+				<AxleGroup>
+					<AxleNumber>2</AxleNumber>
+					<TwinWheelsAxleInd>N</TwinWheelsAxleInd>
+					<PoweredAxleInd>N</PoweredAxleInd>
+					<AxleTrack>1752</AxleTrack>
+					<TechnicallyPermMassAxle>1280</TechnicallyPermMassAxle>
+					<TyreAxleTable>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>1</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+							<RollingResistanceClassCode>A</RollingResistanceClassCode>
+							<CO2DeterminationTyreInd>Y</CO2DeterminationTyreInd>
+							<TyreCategoryCode>C1</TyreCategoryCode>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>2</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>225/45 R18</TyreSize>
+							<TyreNumber>3</TyreNumber>
+							<LoadCapacityIndexSingleWheel>95</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>7,0JX18 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>4</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>5</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+					</TyreAxleTable>
+				</AxleGroup>
+				
+				
+				
+				<AxleGroup>
+					<AxleNumber>3</AxleNumber>
+					<TwinWheelsAxleInd>N</TwinWheelsAxleInd>
+					<PoweredAxleInd>Y</PoweredAxleInd>
+					<AxleTrack>1753</AxleTrack>
+					<AxleSpacing>2970</AxleSpacing>
+					<TechnicallyPermMassAxle>1180</TechnicallyPermMassAxle>
+					<TyreAxleTable>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>1</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+							<RollingResistanceClassCode>A</RollingResistanceClassCode>
+							<CO2DeterminationTyreInd>Y</CO2DeterminationTyreInd>
+							<TyreCategoryCode>C1</TyreCategoryCode>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>2</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>225/45 R18</TyreSize>
+							<TyreNumber>3</TyreNumber>
+							<LoadCapacityIndexSingleWheel>95</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>7,0JX18 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>4</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>5</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+					</TyreAxleTable>
+				</AxleGroup>
+				
+				
+				
+				<AxleGroup>
+					<AxleNumber>4</AxleNumber>
+					<TwinWheelsAxleInd>N</TwinWheelsAxleInd>
+					<PoweredAxleInd>Y</PoweredAxleInd>
+					<AxleTrack>1754</AxleTrack>
+					<AxleSpacing>2970</AxleSpacing>
+					<TechnicallyPermMassAxle>1180</TechnicallyPermMassAxle>
+					<TyreAxleTable>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>1</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+							<RollingResistanceClassCode>A</RollingResistanceClassCode>
+							<CO2DeterminationTyreInd>Y</CO2DeterminationTyreInd>
+							<TyreCategoryCode>C1</TyreCategoryCode>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>2</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>225/45 R18</TyreSize>
+							<TyreNumber>3</TyreNumber>
+							<LoadCapacityIndexSingleWheel>95</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>7,0JX18 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>4</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>5</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+					</TyreAxleTable>
+				</AxleGroup>
+				
+				
+				
+				<AxleGroup>
+					<AxleNumber>5</AxleNumber>
+					<TwinWheelsAxleInd>N</TwinWheelsAxleInd>
+					<PoweredAxleInd>Y</PoweredAxleInd>
+					<AxleTrack>1755</AxleTrack>
+					<AxleSpacing>2970</AxleSpacing>
+					<TechnicallyPermMassAxle>1180</TechnicallyPermMassAxle>
+					<TyreAxleTable>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>1</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+							<RollingResistanceClassCode>A</RollingResistanceClassCode>
+							<CO2DeterminationTyreInd>Y</CO2DeterminationTyreInd>
+							<TyreCategoryCode>C1</TyreCategoryCode>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>2</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>225/45 R18</TyreSize>
+							<TyreNumber>3</TyreNumber>
+							<LoadCapacityIndexSingleWheel>95</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>7,0JX18 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>205/60 R16</TyreSize>
+							<TyreNumber>4</TyreNumber>
+							<LoadCapacityIndexSingleWheel>96</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX16 ET48</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+						<TyreAxleGroup>
+							<TyreSize>215/55 R17</TyreSize>
+							<TyreNumber>5</TyreNumber>
+							<LoadCapacityIndexSingleWheel>98</LoadCapacityIndexSingleWheel>
+							<SpeedCategorySymbol>H</SpeedCategorySymbol>
+							<RimSizeIncludingOffSet>6,5JX17 ET49</RimSizeIncludingOffSet>
+						</TyreAxleGroup>
+					</TyreAxleTable>
+				</AxleGroup>
+			</AxleTable>
+			
+			
+			
+			
+			
+			<WLTPEmissionTestParamGroup>
+				<EmisTestMassWLTP>10</EmisTestMassWLTP>
+				<RoadLoadCoefF0WLTP>10</RoadLoadCoefF0WLTP>
+				<RoadLoadCoefF1WLTP>10</RoadLoadCoefF1WLTP>
+				<RoadLoadCoefF2WLTP>10</RoadLoadCoefF2WLTP>
+				<DrivingCycleClassCode>3b</DrivingCycleClassCode>
+				<CappedSpeedIndicator>N</CappedSpeedIndicator>
+			</WLTPEmissionTestParamGroup>
+			<EngineTable>
+				<EngineGroup>
+					<ManufacturerOfTheEngine>Volkswagen AG</ManufacturerOfTheEngine>
+					<EngineCodeAsMarkedOnTheEngine>DTR</EngineCodeAsMarkedOnTheEngine>
+					<WorkingPrincipleCode>C4</WorkingPrincipleCode>
+					<NumberOfCylinders>4</NumberOfCylinders>
+					<ArrangementOfCylindersCode>LI</ArrangementOfCylindersCode>
+					<EngineCapacity>1968</EngineCapacity>
+					<ElectricEngineIndicator>N</ElectricEngineIndicator>
+					<FuelTable>
+						<FuelGroup>
+							<FuelCode>20</FuelCode>
+							<MaximumNetPower>90.00</MaximumNetPower>
+							<EngineSpeedMaximumNetPower>2750</EngineSpeedMaximumNetPower>
+							<MaximumSpeed>187</MaximumSpeed>
+							<SoundLevelStationary>72</SoundLevelStationary>
+							<SoundLevelStatEngineSpeed>2375</SoundLevelStatEngineSpeed>
+							<SoundLevelDriveBy>70</SoundLevelDriveBy>
+							<ExhaustEmissionLevelEuro>EURO 6 AP</ExhaustEmissionLevelEuro>
+							<NrBaseRegulActLastAmendMotVeh>715/2007*2018/1832AP</NrBaseRegulActLastAmendMotVeh>
+							<SmokeCorrectedAbsorptionCoeff>0.10</SmokeCorrectedAbsorptionCoeff>
+							<TotalCO2WLTPEmSavDueEcoInnFuel>1.02</TotalCO2WLTPEmSavDueEcoInnFuel>
+							<TestprocedureRdeGroup>
+								<TestprocRdeCompleteRdeNOx>10</TestprocRdeCompleteRdeNOx>
+								<TestprocRdeCompleteRdeNrOfPart>10</TestprocRdeCompleteRdeNrOfPart>
+								<TestprocRdeCompleteRdeExpPart>10</TestprocRdeCompleteRdeExpPart>
+								<TestprocRdeUrbanRdeNOx>10</TestprocRdeUrbanRdeNOx>
+								<TestprocRdeUrbanRdeNrOfPart>10</TestprocRdeUrbanRdeNrOfPart>
+								<TestprocRdeUrbanRdeExpPart>10</TestprocRdeUrbanRdeExpPart>
+							</TestprocedureRdeGroup>
+							<TestprocedureWLTPType1Group>
+								<TestprocWltpType1CO>10</TestprocWltpType1CO>
+								<TestprocWltpType1NOx>10</TestprocWltpType1NOx>
+								<TestprocWltpType1THC_NOx>10</TestprocWltpType1THC_NOx>
+								<TestprocWltpType1Particulates>10</TestprocWltpType1Particulates>
+								<TestprocWltpType1NrOfPart>10</TestprocWltpType1NrOfPart>
+								<TestprocWltpType1ExPart>10</TestprocWltpType1ExPart>
+							</TestprocedureWLTPType1Group>
+							<TestprocedureWLTPCO2Group>
+								<WLTPLowCO2>10</WLTPLowCO2>
+								<WLTPMediumCO2>10</WLTPMediumCO2>
+								<WLTPHighCO2>10</WLTPHighCO2>
+								<WLTPExtraHighCO2>10</WLTPExtraHighCO2>
+								<WLTPCombinedCO2>10</WLTPCombinedCO2>
+							</TestprocedureWLTPCO2Group>
+							<TestprocedureWLTPFuelGroup>
+								<WLTPLowFuelConsumption>10</WLTPLowFuelConsumption>
+								<WLTPMediumFuelConsumption>10</WLTPMediumFuelConsumption>
+								<WLTPHighFuelConsumption>10</WLTPHighFuelConsumption>
+								<WLTPExtraHighFuelConsumption>10</WLTPExtraHighFuelConsumption>
+								<WLTPCombinedFuelCons>10</WLTPCombinedFuelCons>
+							</TestprocedureWLTPFuelGroup>
+						</FuelGroup>
+					</FuelTable>
+				</EngineGroup>
+			</EngineTable>
+			<TrailerBrakeTable>
+				<TrailerBrakeGroup>
+					<TrailerBrakeConnectionsCode>NON</TrailerBrakeConnectionsCode>
+				</TrailerBrakeGroup>
+			</TrailerBrakeTable>
+			<MechanicalCouplingTable>
+				<MechanicalCouplingGroup>
+					<MechanicalCouplingNumber>1</MechanicalCouplingNumber>
+					<TechPermMaxTowMassCentAxTrail>1500</TechPermMaxTowMassCentAxTrail>
+					<TechPermMaxTowMassUnbrTrailer>750</TechPermMaxTowMassUnbrTrailer>
+					<TechPermMaxStatVertMassCouplPt>75</TechPermMaxStatVertMassCouplPt>
+				</MechanicalCouplingGroup>
+			</MechanicalCouplingTable>
+			<EcoInnovationsTable>
+				<EcoInnovationsGroup>
+					<GeneralCodeOfTheEcoInnovations>e1 29</GeneralCodeOfTheEcoInnovations>
+				</EcoInnovationsGroup>
+			</EcoInnovationsTable>
+			<TestFamilyIdentifiersTable>
+				<TestFamilyIdentifiersGroup>
+					<FamilyIdentifierCode>IP</FamilyIdentifierCode>
+					<FamilyIdentifierValue>IP-MQB37AZ_A2_0115-WVN-1</FamilyIdentifierValue>
+				</TestFamilyIdentifiersGroup>
+				<TestFamilyIdentifiersGroup>
+					<FamilyIdentifierCode>ATCT</FamilyIdentifierCode>
+					<FamilyIdentifierValue>AT-2KA_2N_0102_000-WVN-1</FamilyIdentifierValue>
+				</TestFamilyIdentifiersGroup>
+				<TestFamilyIdentifiersGroup>
+					<FamilyIdentifierCode>PEMS</FamilyIdentifierCode>
+					<FamilyIdentifierValue>01-WF0-715W_SKF_DTRC_FM6_0_A_1_1-000</FamilyIdentifierValue>
+				</TestFamilyIdentifiersGroup>
+				<TestFamilyIdentifiersGroup>
+					<FamilyIdentifierCode>RL</FamilyIdentifierCode>
+					<FamilyIdentifierValue>RL-MQ281Z6F_20_001-WVN-1</FamilyIdentifierValue>
+				</TestFamilyIdentifiersGroup>
+				<TestFamilyIdentifiersGroup>
+					<FamilyIdentifierCode>PR</FamilyIdentifierCode>
+					<FamilyIdentifierValue>PR-VW_00259_00_000-WVN-1</FamilyIdentifierValue>
+				</TestFamilyIdentifiersGroup>
+			</TestFamilyIdentifiersTable>
+			<AdvancedSafetySystemTable>
+				<AdvancedSafetySystemGroup>
+					<AdvancedSafetySystemCode>TPMS</AdvancedSafetySystemCode>
+				</AdvancedSafetySystemGroup>
+				<AdvancedSafetySystemGroup>
+					<AdvancedSafetySystemCode>ESS</AdvancedSafetySystemCode>
+				</AdvancedSafetySystemGroup>
+				<AdvancedSafetySystemGroup>
+					<AdvancedSafetySystemCode>eCall</AdvancedSafetySystemCode>
+				</AdvancedSafetySystemGroup>
+			</AdvancedSafetySystemTable>
+		</CocDataGroup>
+	</Body>
+</InitialVehicleInformation>
