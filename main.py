@@ -1,12 +1,12 @@
-from config import (
+from automation.config.config import (
     EXIT_DOT_DELAY_SECONDS,
     EXIT_DOT_COUNT,
     CLEAR_CONSOLE_ON_MAIN_MENU_SHOW,
 )
-from driver_factory import create_driver
-from login import login_interactive
-from menu_prompt import ask_user_action
-from ui import animated_exit, clear_console
+from automation.driver.driver_factory import create_driver
+from automation.auth.login import login_interactive
+from automation.menu.menu_prompt import ask_user_action
+from automation.ui.ui import animated_exit, clear_console
 
 
 def main():

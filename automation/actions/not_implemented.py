@@ -1,11 +1,11 @@
-from config import (
+from automation.config.config import (
     EXIT_DOT_DELAY_SECONDS,
     EXIT_DOT_COUNT,
     CLEAR_CONSOLE_ON_SUBMENU_ENTER,
     CLEAR_CONSOLE_ON_SUBMENU_EXIT,
 )
-from ui import animated_exit, clear_console
-from menu_actions.base import MenuAction, ActionResult
+from automation.ui.ui import animated_exit, clear_console
+from automation.actions.base import MenuAction, ActionResult
 
 
 class NotImplementedAction(MenuAction):

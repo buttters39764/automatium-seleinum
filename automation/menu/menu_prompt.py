@@ -1,4 +1,4 @@
-from menu_registry import ACTIONS
+from automation.menu.menu_registry import ACTIONS
 
 
 def ask_user_action():
