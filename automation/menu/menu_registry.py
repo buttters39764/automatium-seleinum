@@ -1,5 +1,5 @@
-from menu_actions.ivi_tarolo import IVITaroloAction
-from menu_actions.not_implemented import NotImplementedAction
+from automation.actions.ivi_tarolo import IVITaroloAction
+from automation.actions.not_implemented import NotImplementedAction
 
 ACTIONS = [
     IVITaroloAction(),                    # 1

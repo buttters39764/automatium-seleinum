@@ -4,7 +4,7 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.edge.options import Options as EdgeOptions
 
-from config import DEFAULT_BROWSER
+from automation.config.config import DEFAULT_BROWSER
 
 
 def _start_firefox():
