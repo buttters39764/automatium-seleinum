@@ -16,3 +16,7 @@ DEFAULT_BROWSER = "firefox"  # firefox | chrome | edge
 
 # IVI fájl generátor
 IVI_MAX_FILES_PER_USER = 3 # hány darab IVI fájlt tartunk meg
+
+# Default login user (env + PIN helyett)
+DEFAULT_LOGIN_USERNAME = "pc@ext.dmz"
+DEFAULT_LOGIN_PASSWORD = "Valamivalami123."
