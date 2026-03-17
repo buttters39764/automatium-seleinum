@@ -6,15 +6,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from automation.config.config import (
-    EXIT_DOT_DELAY_SECONDS,
-    EXIT_DOT_COUNT,
-    CLEAR_CONSOLE_ON_SUBMENU_ENTER,
-    CLEAR_CONSOLE_ON_SUBMENU_EXIT,
-    LOGIN_URL,
+    ExitDotDelaySeconds,
+    ExitDotCount,
+    ClearConsoleOnSubmenuEnter,
+    ClearConsoleOnSubmenuExit,
+    LoginUrl,
 )
 from automation.ui.ui import animated_exit, clear_console
 from automation.actions.base import MenuAction, ActionResult
 from automation.ivi.ivi_file_generator import create_ivi_file
+from automation.logging.logger import info, debug, warning, exception
 
 
 class IVITaroloAction(MenuAction):
@@ -40,7 +41,7 @@ class IVITaroloAction(MenuAction):
         wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "ivi-lister")))
 
     def _open_login_page(self, driver):
-        driver.get(LOGIN_URL)
+        driver.get(LoginUrl)
 
     def _dismiss_vezerkepviselet_dialog_if_open(self, driver):
         result = driver.execute_script("""
@@ -72,7 +73,7 @@ class IVITaroloAction(MenuAction):
 
     def _click_new_button(self, driver):
         dialog_result = self._dismiss_vezerkepviselet_dialog_if_open(driver)
-        print(f"[DEBUG] Dialog kezelés eredmény: {dialog_result}")
+        debug(f"[DEBUG] Dialog kezelés eredmény: {dialog_result}")
         time.sleep(0.7)
 
         result = driver.execute_script("""
@@ -128,12 +129,12 @@ class IVITaroloAction(MenuAction):
             return {clicked:false, where:'not-found'};
         """)
 
-        print(f"[DEBUG] Új gomb kattintás eredmény: {result}")
+        debug(f"[DEBUG] Új gomb kattintás eredmény: {result}")
 
         if not result.get("clicked"):
             try:
                 driver.save_screenshot("artifacts_new_btn_not_found.png")
-                print("[DEBUG] Screenshot: artifacts_new_btn_not_found.png")
+                warning("[WARN] Screenshot mentve: artifacts_new_btn_not_found.png")
             except Exception:
                 pass
             raise RuntimeError("Az 'Új' gomb nem található Vaadin shadow/overlay DOM-ban sem.")
@@ -186,7 +187,7 @@ class IVITaroloAction(MenuAction):
                 return {found:false};
             """)
             if state.get("found"):
-                print(f"[DEBUG] Upload dialog megtalálva: {state}")
+                debug(f"[DEBUG] Upload dialog megtalálva: {state}")
                 return
             time.sleep(poll)
 
@@ -243,7 +244,7 @@ class IVITaroloAction(MenuAction):
         """, file_input)
 
         file_input.send_keys(abs_path)
-        print(f"[DEBUG] send_keys sikeres: {abs_path}")
+        debug(f"[DEBUG] send_keys sikeres: {abs_path}")
         return file_path
 
     def _click_upload_all_button(self, driver):
@@ -306,7 +307,7 @@ class IVITaroloAction(MenuAction):
             return {ok:false};
         """)
 
-        print(f"[DEBUG] Upload gomb kattintás eredmény: {result}")
+        debug(f"[DEBUG] Upload gomb kattintás eredmény: {result}")
 
         if not result.get("ok"):
             raise RuntimeError("Az 'Összes fájl feltöltése' gomb nem található vagy nem aktív.")
@@ -314,9 +315,8 @@ class IVITaroloAction(MenuAction):
     def _run_new_ivi_flow(self, driver) -> ActionResult:
         self._open_ivi_page(driver)
 
-        # minden futáskor új, egyedi IVI fájl
         generated_file = create_ivi_file("buttters39764")
-        print(f"[DEBUG] Új IVI fájl generálva: {generated_file}")
+        info(f"[INFO] Új IVI fájl generálva: {generated_file}")
 
         self._click_new_button(driver)
         self._wait_for_upload_dialog(driver)
@@ -326,11 +326,11 @@ class IVITaroloAction(MenuAction):
         return ActionResult(True, f"IVI feltöltés elindítva: {generated_file.name}")
 
     def run(self, driver):
-        if CLEAR_CONSOLE_ON_SUBMENU_ENTER:
+        if ClearConsoleOnSubmenuEnter:
             clear_console()
 
         self._open_ivi_page(driver)
-        print("[OK] IVI tároló oldal megnyitva.")
+        info("[OK] IVI tároló oldal megnyitva.")
 
         while True:
             print("\nIVI tároló menü")
@@ -342,18 +342,18 @@ class IVITaroloAction(MenuAction):
             if sub == "1":
                 try:
                     result = self._run_new_ivi_flow(driver)
-                    print(f"[OK] {result.message}")
+                    info(f"[OK] {result.message}")
                 except Exception as e:
-                    print(f"[HIBA] IVI feltöltés sikertelen: {e}")
+                    exception(f"[HIBA] IVI feltöltés sikertelen: {e}")
                 continue
 
             if sub == "q":
                 self._open_login_page(driver)
-                animated_exit(EXIT_DOT_DELAY_SECONDS, EXIT_DOT_COUNT)
+                animated_exit(ExitDotDelaySeconds, ExitDotCount)
 
-                if CLEAR_CONSOLE_ON_SUBMENU_EXIT:
+                if ClearConsoleOnSubmenuExit:
                     clear_console()
 
                 return ActionResult(True, "Visszalépés a főmenübe.")
 
-            print("Érvénytelen választás, próbáld újra.")
+            warning("Érvénytelen választás, próbáld újra.")

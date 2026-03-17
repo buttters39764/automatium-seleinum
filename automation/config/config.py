@@ -1,22 +1,27 @@
-LOGIN_URL = "http://d01.np:9004/login"
-TIMEOUT = 30
-VISUAL_DELAY = 2
+LoginUrl = "http://d01.np:9004/login"
+Timeout = 30
+VisualDelay = 2
 
 # Központi konfiguráció
-EXIT_DOT_DELAY_SECONDS = 0.3
-EXIT_DOT_COUNT = 3
+ExitDotDelaySeconds = 0.3
+ExitDotCount = 3
 
 # Konzol törlés kapcsolók
-CLEAR_CONSOLE_ON_MAIN_MENU_SHOW = True # True | False
-CLEAR_CONSOLE_ON_SUBMENU_ENTER = True # True | False
-CLEAR_CONSOLE_ON_SUBMENU_EXIT = True # True | False
+ClearConsoleOnMainMenuShow = True  # True | False
+ClearConsoleOnSubmenuEnter = True  # True | False
+ClearConsoleOnSubmenuExit = True   # True | False
 
 # Elsődleges preferencia
-DEFAULT_BROWSER = "firefox"  # firefox | chrome | edge
+DefaultBrowser = "firefox"  # firefox | chrome | edge
 
 # IVI fájl generátor
-IVI_MAX_FILES_PER_USER = 3 # hány darab IVI fájlt tartunk meg
+IviMaxFilesPerUser = 3  # hány darab IVI fájlt tartunk meg
 
-# Default login user (env + PIN helyett)
-DEFAULT_LOGIN_USERNAME = "pc@ext.dmz"
-DEFAULT_LOGIN_PASSWORD = "Valamivalami123."
+# Default login user
+DefaultLoginUsername = "pc@ext.dmz"
+DefaultLoginPassword = "Valamivalami123."
+
+# Logging
+EnableDebugLogging = False
+LogDirectory = "logs"
+LogFilePrefix = "automation"

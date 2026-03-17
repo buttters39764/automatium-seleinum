@@ -4,7 +4,8 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.edge.options import Options as EdgeOptions
 
-from automation.config.config import DEFAULT_BROWSER
+from automation.config.config import DefaultBrowser
+from automation.logging.logger import info, warning
 
 
 def _start_firefox():
@@ -29,13 +30,10 @@ def create_driver():
         "edge": _start_edge,
     }
 
-    default_browser = (DEFAULT_BROWSER or "firefox").strip().lower()
+    default_browser = (DefaultBrowser or "firefox").strip().lower()
     if default_browser not in starters:
         default_browser = "firefox"
 
-    # Windows fallback sorrend:
-    # 1) config default
-    # 2) a maradék fix sorrendben: firefox -> chrome -> edge
     ordered = [default_browser] + [b for b in ["firefox", "chrome", "edge"] if b != default_browser]
 
     last_error = None
@@ -43,10 +41,10 @@ def create_driver():
         try:
             driver = starters[browser]()
             driver.maximize_window()
-            print(f"[INFO] Böngésző indul: {browser}")
+            info(f"[INFO] Böngésző indul: {browser}")
             return driver
         except WebDriverException as e:
-            print(f"[WARN] {browser} nem indult: {e.__class__.__name__}")
+            warning(f"[WARN] {browser} nem indult: {e.__class__.__name__}")
             last_error = e
 
     raise RuntimeError(

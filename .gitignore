@@ -12,3 +12,7 @@ documentation/.obsidian/cache/
 # Generated IVI XML files
 input_file/ivi/generated/*
 !input_file/ivi/generated/.gitkeep
+
+# Runtime logs (daily files)
+logs/
+*.log
