@@ -5,35 +5,36 @@
   - elsődleges: Firefox
   - fallback: Chrome
   - fallback: Edge
-- Projekt mappa (pl. `C:\Users\buttt\PycharmProjects\Automation`)
+- Projekt mappa (pl. `C:\Users\user\Project\Automation`)
 
+---
 
 ## 2) Python 3 telepítés és ellenőrzés
 
 ### a) Ellenőrzés: telepítve van-e?
 CMD-ben futtasd:
 
-```
+```bat
 python --version
 ```
 
-Nekem jelenleg ez van telepítve: Python 3.12.3
+Nálam jelenleg: `Python 3.12.3`
 
----
-### b) Ha nincs
+### b) Ha nincs telepítve
 https://www.python.org/downloads/windows/
 
-## 2) Virtuális környezet használata (venv)
+---
 
-CMD-ben nálam:
+## 3) Virtuális környezet használata (venv)
 
 ```bat
 cd C:\Users\buttt\PycharmProjects\Automation
 .venv\Scripts\activate
 ```
+
 ---
 
-## 3) Függőségek telepítése
+## 4) Függőségek telepítése
 
 ```bat
 python -m pip install --upgrade pip
@@ -46,64 +47,63 @@ Ellenőrzés:
 python -m pip show selenium
 ```
 
- Nekem jelenleg ez van: 
- 
-Name: selenium
-Version: 4.41.0
-Summary: Official Python bindings for Selenium WebDriver
-Home-page: https://www.selenium.dev
-Author:
-Author-email:
-License: Apache-2.0
-Location: C:\Users\buttt\AppData\Local\Programs\Python\Python312\Lib\site-packages
-Requires: certifi, trio, trio-websocket, typing_extensions, urllib3, websocket-client
-Required-by:
+---
+
+## 5) Konfiguráció
+
+A fő beállítások az `automation/config/config.py` fájlban vannak.
+
+Példák:
+- `DefaultBrowser = "firefox"`
+- `DefaultLoginUsername = "pc@ext.dmz"`
+- `DefaultLoginPassword = "Valamivalami123."`
+- `EnableDebugLogging = True` / `False`
+- `LogDirectory = "logs"`
+
+
 
 ---
 
-## 4) Környezeti változók beállítása (default loginhoz) - opcionális
-
-A script két login módot tud:
-- **default user** (PIN + előre beállított user/pass)
-- **kézi user/pass**
-
-Default módhoz szükséges környezeti változók:
-
-- `DEFAULT_LOGIN_PIN`
-- `DEFAULT_KOKIRT_USERNAME`
-- `DEFAULT_KOKIRT_PASSWORD`
-
-Példa (aktuális CMD sessionre):
-
-```bat
-set DEFAULT_LOGIN_PIN=1234
-set DEFAULT_KOKIRT_USERNAME=valami@ext.dmz
-set DEFAULT_KOKIRT_PASSWORD=password
-```
-
----
-
-## 5) Indítás
+## 6) Indítás
 
 ```bat
 python main.py
 ```
 
-Induláskor kérdés:
-- `Bejelentkezés default userrel? (i/n):`
+Belépéskor ez jelenik meg:
 
-### Ha  `i`
-- Ha beállítottál környezeti változókat
-- PIN bekérés
-- helyes PIN esetén default userrel login
+- `Info: Belépés előtt ellenőrizd, hogy az ip címed megfelelő telephelyen legyen a sikeres belépés érdekében.`
+- `Default userrel akarsz belépni?`
+- `Enter = igen / n = nem`
+
+### Ha Enter
+- default userrel belép (`config.py` alapján)
 
 ### Ha `n`
-- felhasználónév/jelszó kézi megadás
+- felhasználónév/jelszó kézi megadása
 - sikertelen login esetén újrapróbálás
 
 ---
 
-## 6) Gyakran előfordult hibák
+## 7) Logolás
+
+- A logok fájlba is íródnak (napi bontásban).
+- Fájl minta: `logs/automation_YYYY-MM-DD.log`
+- Debug részletek kapcsolása:
+  - `EnableDebugLogging = True` -> részletes debug log
+  - `EnableDebugLogging = False` -> normál log
+
+Javasolt `.gitignore`:
+
+```gitignore
+*.log
+```
+
+(vagy célzottan: `logs/`)
+
+---
+
+## 8) Gyakran előforduló hibák
 
 ### `ModuleNotFoundError: No module named 'selenium'`
 Nincs aktiválva a venv, vagy oda nincs telepítve a selenium.
@@ -115,21 +115,15 @@ Megoldás:
 python -m pip install selenium
 ```
 
----
-
-### `ValueError: Hiányzik DEFAULT_LOGIN_PIN vagy default user/pass env változó.`
-`i` módot választottál, de hiányzik valamelyik env változó.
-
-Megoldás: állítsd be mindhárom változót (`PIN`, `USERNAME`, `PASSWORD`), vagy válaszd az `n` módot.
-
----
-
 ### Böngésző nem indul
-A driver sorrend:
-1. firefox - configban állítható
-2. chrome
-3. edge
+Indítási sorrend:
+1. `DefaultBrowser` (configban)
+2. firefox
+3. chrome
+4. edge
 
 Ha egyik sem indul, telepíts legalább egy támogatott böngészőt.
 
----
+### Program inputnál „megáll”
+A CLI inputra vár (ez normális működés).  
+Pl. `Választás (Enter/n):` sor után adj Entert vagy `n`-t.

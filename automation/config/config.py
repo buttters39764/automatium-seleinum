@@ -24,4 +24,3 @@ DefaultLoginPassword = "Valamivalami123."
 # Logging
 EnableDebugLogging = False
 LogDirectory = "logs"
-LogFilePrefix = "automation"
