@@ -2,7 +2,7 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
-from automation.config.config import EnableDebugLogging, LogDirectory, LogFilePrefix
+from automation.config.config import EnableDebugLogging, LogDirectory
 
 _LOGGER_NAME = "automation"
 _CONFIGURED = False
@@ -12,7 +12,7 @@ def _build_log_file_path() -> Path:
     log_dir = Path(LogDirectory)
     log_dir.mkdir(parents=True, exist_ok=True)
     date_str = datetime.now().strftime("%Y-%m-%d")
-    return log_dir / f"{LogFilePrefix}_{date_str}.log"
+    return log_dir / f"{date_str}.log"
 
 
 def setup_logging():
@@ -23,17 +23,14 @@ def setup_logging():
     logger = logging.getLogger(_LOGGER_NAME)
     logger.setLevel(logging.DEBUG)
     logger.propagate = False
-
-    # duplikált handlerek ellen védelem
     logger.handlers.clear()
 
-    # Konzol: csak üzenet
     console_level = logging.DEBUG if EnableDebugLogging else logging.INFO
+
     ch = logging.StreamHandler()
     ch.setLevel(console_level)
     ch.setFormatter(logging.Formatter("%(message)s"))
 
-    # Fájl: timestamp + message (NINCS level/name mező)
     fh = logging.FileHandler(_build_log_file_path(), encoding="utf-8")
     fh.setLevel(logging.DEBUG if EnableDebugLogging else logging.INFO)
     fh.setFormatter(logging.Formatter("%(asctime)s | %(message)s", datefmt="%Y-%m-%d %H:%M:%S"))
